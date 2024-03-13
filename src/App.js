@@ -1,23 +1,21 @@
 import logo from './logo.svg';
-import './App.css';
+import './output.css';
+import Contact from "./component/Contact"
+import Header from './component/Header';
+import Landing from './component/Landing';
+import Login from './component/Login';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Header/>
+
+    <div className=' flex justify-center'>
+    <Login/>
+    </div>
+    
     </div>
   );
 }
