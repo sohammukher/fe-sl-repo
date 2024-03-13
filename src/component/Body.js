@@ -4,10 +4,12 @@ import { RouterProvider } from 'react-router-dom'
 import Landing from './Landing'
 import Contact from './Contact'
 import AppLayout from './AppLayout'
+import Login from './Login'
 
 const Body = () => {
 
-    const appRouter = createBrowserRouter([
+    const appRouter = createBrowserRouter(
+        [
         {
             path: "/",
             element: <Login/>,
