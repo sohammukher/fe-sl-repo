@@ -3,6 +3,7 @@ import React from 'react';
 const Landing = () => {
   return (
     <div className="relative">
+      <h1>LANDING----------</h1>
       <img
         src="https://www.soundtrad.com/wp-content/uploads/2023/03/collection-hand-gestures-sign-language.jpg"
         alt="TEXT"

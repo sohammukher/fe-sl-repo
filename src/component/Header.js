@@ -61,8 +61,7 @@ const Header = () => {
      </div>
 
 
-<div className="bg-blue-800 p-2 rounded-lg  text-white font-semibold">
-Login
+<div className="bg-blue-800 p-2 rounded-lg  text-white font-semibold"> Login
 </div>
 
     </div>
