@@ -1,9 +1,10 @@
 import React from 'react';
-import Header from './Header';
+import LoginHeader from './LoginHeader';
 
 const Login = () => {
   return(
     <div>
+      <LoginHeader />
       <h1>LOGIN PAGE</h1>
     </div>
   )
