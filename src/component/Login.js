@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import validate from '../utils/validate';
 import { auth } from '../utils/firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
@@ -13,6 +14,9 @@ const Login = () => {
 
   // for error message after data validations
   const [errorMessage, setErrorMessage] = useState(null);
+
+
+  const navigate = useNavigate();
 
 
   // Taking reference of these values from the input fields of name, email and password
@@ -64,6 +68,8 @@ const Login = () => {
     // Signed up 
     const user = userCredential.user;
     console.log(user);
+
+    navigate("/choice");
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -83,6 +89,7 @@ const Login = () => {
     // Signed in 
     const user = userCredential.user;
     console.log(user);
+    navigate("/choice");
   })
   .catch((error) => {
     const errorCode = error.code;

@@ -5,38 +5,13 @@
 
 // -------------------------
 import { useState,useEffect } from "react";
-// import { LOGO_URL } from "../utils/constant";
-import { Link } from "react-router-dom";
-
-// import useOnlineStatus from "../utils/useOnlineStatus"
-
-// For Using the React Context
-
-// Import the Context File
-// import UserContext from "../utils/UserContext";
-
-// Import useContext from "react"
-import { useContext } from "react";
-
-
-// import { Provider } from "react-redux";
-// import {appStore} from "../utils/appStore"
-// import { changeLanguage } from "../utils/configSlice";
-
-// import {useDispatch, useSelector} from "react-redux"
-
-// import { Provider, useSelector } from "react-redux";
-// import appStore from "../utils/appStore";
-// import GPTSearchUI from './GPTSearchUI';
-// import gptSlice from "../utils/gptSlice";
+import { auth } from "../utils/firebase";
+import { signOut } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Header = () => {
   let loginBtnTxt = "Login";
-  // let loginBtnTxt = "Logout";
-
-
-  // let modeText = "Dark";
 
  let [modeText, setModeText] = useState("Dark");
 
@@ -45,7 +20,20 @@ const Header = () => {
 
   const [welcomeText,setWelcomeText] = useState("Welcome Visitor");
 
- 
+
+  const navigate = useNavigate();
+
+  // To sign out the user
+  const handleLogout = () => {
+
+    signOut(auth).then(() => {
+      // Sign-out successful.
+      navigate("/login");
+    }).catch((error) => {
+      // An error happened.
+      navigate("/error")
+    });
+  }
 
   return (
 
@@ -61,8 +49,10 @@ const Header = () => {
      </div>
 
 
-<div className="bg-blue-800 p-2 rounded-lg  text-white font-semibold"> Login
-</div>
+{/* <div className="bg-blue-800 p-2 rounded-lg  text-white font-semibold"> Logout */}
+{/* </div> */}
+
+<button onClick={handleLogout} className="bg-red-800">Logout</button>
 
     </div>
   );
