@@ -4,8 +4,7 @@ import Header from './Header';
 const Login = () => {
   return(
     <div>
-    <Header />
-      <h1>login------------------</h1>
+      <h1>LOGIN PAGE</h1>
     </div>
   )
   

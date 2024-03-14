@@ -13,16 +13,22 @@ import Contact from './component/Contact';
 import {createBrowserRouter,RouterProvider } from "react-router-dom";
 
 import AppLayout from './component/AppLayout'
+import Login from './component/Login';
 
 const appRouter = createBrowserRouter([
   {
       path: "/",
       element: <AppLayout/>,
       children:
-      [
+      [ 
           {
-              path: "/landing",
-              element: <Landing/>
+          path: "/",
+          element: <Landing/>
+        }
+        ,
+          {
+              path: "/login",
+              element: <Login/>
           },
           {
               path: "/contact",
