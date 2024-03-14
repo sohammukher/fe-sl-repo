@@ -17,6 +17,9 @@ import Login from './component/Login';
 import PostLoginChoice from './component/PostLoginChoice';
 import { KidsPage } from './component/KidsPage';
 import AdultPage from './component/AdultPage';
+// import { Provider, useDispatch } from 'react-redux';
+// import { addUser, removeUser } from '../utils/userSlice'
+// import appStore from '../utils/appStore';
 
 const appRouter = createBrowserRouter([
   {
@@ -60,7 +63,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 // Routing Done From Root.
-root.render(<RouterProvider router={appRouter}/>)
+root.render(
+
+<RouterProvider router={appRouter}/>
+
+)
 
 
 // If you want to start measuring performance in your app, pass a function

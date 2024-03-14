@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Landing = () => {
   return (
-    <div className="relative">
-    <h1>LANDING----------</h1>
+    <div className="relative  bg-opacity-50"  style={{backgroundImage: "url(https://w.forfun.com/fetch/2c/2ceda46989c2534b90b8aabf48f66a97.jpeg)"}}>
 
     <div className="">
     <h1 className="text-3xl font-bold text-center">Welcome to Sign Language Converter</h1>
