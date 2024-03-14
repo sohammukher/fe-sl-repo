@@ -27,15 +27,16 @@ const appRouter = createBrowserRouter([
         }
         ,
           {
-              path: "/login",
-              element: <Login/>
-          },
-          {
               path: "/contact",
               element: <Contact/>
           },
       ]
   },
+  {
+
+    path: "/login",
+    element: <Login/>
+  }
 ])
 
 
