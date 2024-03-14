@@ -14,6 +14,7 @@ import {createBrowserRouter,RouterProvider } from "react-router-dom";
 
 import AppLayout from './component/AppLayout'
 import Login from './component/Login';
+import PostLoginChoice from './component/PostLoginChoice';
 
 const appRouter = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ const appRouter = createBrowserRouter([
               path: "/contact",
               element: <Contact/>
           },
+
+          {
+            path: "/choice",
+            element: <PostLoginChoice/>
+        },
       ]
   },
   {
