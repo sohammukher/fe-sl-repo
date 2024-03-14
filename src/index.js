@@ -5,16 +5,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Landing from './component/Landing';
 import Contact from './component/Contact';
-// import { createBrowserRouter } from 'react-router-dom'
-// import { RouterProvider } from 'react-router-dom'
-
 
 // Routing Imports
 import {createBrowserRouter,RouterProvider } from "react-router-dom";
-
 import AppLayout from './component/AppLayout'
 import Login from './component/Login';
 import PostLoginChoice from './component/PostLoginChoice';
+import { Provider } from 'react-redux';
+import appStore from './utils/appStore';
 
 const appRouter = createBrowserRouter([
   {
@@ -48,10 +46,10 @@ const appRouter = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
-// Routing Done From Root.
-root.render(<RouterProvider router={appRouter}/>)
-
+{/* Routing Done From Root. */}
+<Provider store = {appStore}>
+{root.render(<RouterProvider router={appRouter}/>)}
+</Provider>
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
