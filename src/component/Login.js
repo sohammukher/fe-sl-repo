@@ -2,6 +2,8 @@ import React from 'react';
 import LoginHeader from './LoginHeader';
 import { useState, useRef } from 'react';
 import validate from '../utils/validate';
+import { auth } from '../utils/firebase';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 const Login = () => {
 
@@ -28,20 +30,67 @@ const Login = () => {
 
  const handleButtonClick = () => {
 
-  // console.log(email.current.value);
-
   const emailValue = email.current ? email.current.value : null;
   const passwordValue = password.current ? password.current.value : null;
   const nameValue = name.current ? name.current.value : null;
+
+  console.log(emailValue);
+  console.log(passwordValue);
 
   const message = validate(emailValue, passwordValue, nameValue);
  
   // console.log(message);
 
   setErrorMessage(message);
+
+  // If message is present, that means error happened, so we return directly from here
+  // otherwise, we proceed to sign in/ sign up
+
+  if(message) return;
+
+  // sign in/up successfull so we can create a user
+
+  if(!isSignInForm)
+  {
+    // Sign Up Form Logic
+    createUserWithEmailAndPassword(
+      auth,
+      emailValue,
+      passwordValue,
+      nameValue
+      )
+
+  .then((userCredential) => {
+    // Signed up 
+    const user = userCredential.user;
+    console.log(user);
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    setErrorMessage(errorCode + "-" + errorMessage);
+  });
+  }
+  else
+  {
+    // Sign In Form Logic
+    signInWithEmailAndPassword(
+      auth,
+      emailValue,
+      passwordValue
+    )
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    console.log(user);
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    setErrorMessage(errorCode + "-" + errorMessage);
+  });
+  }
 }
-
-
 
   return(
     <div>
