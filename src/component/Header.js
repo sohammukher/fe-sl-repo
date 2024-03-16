@@ -37,22 +37,23 @@ const Header = () => {
 
   return (
 
-    <div className=" bg-amber-400 flex  justify-between   h-12">
-     <div className="  font-extrabold px-4">
-      Sign Language Converter
+    <div className=" bg-amber-400 flex bg-gradient-to-t from-orange-400  justify-between   h-20">
+     <div className=" font-extrabold px-5 p-4 text-3xl">
+      SignLingual
      </div>
 
-     <div className="px-4   font-semibold">
-     <span className="px-2">ABOUT</span>
-     <span className="px-2">CONTACT US</span>
-     <span className="px-2">HOME</span>
+     <div className="px-5 py-6  font-bold text-xl">
+     <span className="px-2 cursor-pointer">HOME</span>
+     <span className="px-2 cursor-pointer">ABOUT</span>
+     <span className="px-2 cursor-pointer">CONTACT</span>
+     
      </div>
 
 
 {/* <div className="bg-blue-800 p-2 rounded-lg  text-white font-semibold"> Logout */}
 {/* </div> */}
 
-<button onClick={handleLogout} className="bg-red-800">Logout</button>
+<button onClick={handleLogout} className="bg-red-800 text-xl text-white rounded-xl p-3 m-3 hover:bg-red-600">Logout</button>
 
     </div>
   );
