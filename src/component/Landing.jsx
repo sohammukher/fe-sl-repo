@@ -9,10 +9,10 @@ const Landing = () => {
     <div className="">
 
     
-    <div className='bg-white p-10 bg-black bg-gradient-to-b from-orange-400 to-amber-200 w-screen'>
+    <div className='bg-white p-10 bg-black bg-gradient-to-r  bg-gradient-to-r from-black via-white to-black from-black to-white w-screen'>
       {/* <img className='object-none justify-' src='https://i.pinimg.com/originals/87/86/7b/87867b9749f01842a84f90228a7147f8.jpg' alt='banner' /> */}
-    <h1 className="text-3xl font-bold text-center">Welcome to SignLingual🖖🏻</h1>
-    <p className="text-xl text-center font-semibold p-4">Break down communication barrier, Translate text into sign language instantly. Easy, customizable, and inclusive.</p>
+    <h1 className="text-3xl font-bold text-center text-black">Welcome to SignLingual🖖🏻</h1>
+    <p className="text-xl text-center font-semibold p-4 text-black">Break down communication barriers, Translate text into sign language instantly!</p>
     </div>
 
 
