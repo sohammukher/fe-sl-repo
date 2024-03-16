@@ -35,7 +35,7 @@ const Landing = () => {
       </div>
 
       <div className=' mt-10'>
-        <div className=' font-bold text-3xl p-3 '>Login to Start Learning</div>
+        <div className=' font-bold text-3xl p-3  ml-[50px]'>Login to Start Learning</div>
         <Link to= "/login">
         <button className='p-4 m-2 bg-amber-400 rounded-2xl p-4 ml-[130px] w-44 border-2 border-black font-semibold text-xl hover:bg-amber-300'>Login</button>
         </Link>
