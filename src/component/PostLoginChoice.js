@@ -75,8 +75,10 @@ const PostLoginChoice = () => {
     
         <div className='p-2 mt-20   text-4xl text-center font-semibold'>Choose your age group </div>
 
+        <p className='font-semibold text-xl p-3 text-center'>Select the age group that you belong to and start learning sign language</p>
 
-        <div className=' flex m-20  justify-center'>
+
+        <div className=' flex m-12  justify-center'>
         
         {type.map((curr, index) => (
     <Link to={curr.name==="Kids"?"/kids":"/adults"}>
