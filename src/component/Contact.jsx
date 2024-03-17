@@ -1,24 +1,52 @@
 import React from 'react'
+import img2 from '../ASL-cover-image.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const Contact = () => {
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+
+    navigate("/")
+  }
+
+
   return (
-    <div className="text-center   bg-orange-300 w-[50%] rounded-2xl mt-[40px] border border-black ">
-    <h1 className="font-bold text-3xl p-4 m-4 ">Contact Us</h1>
-    <form className=' w-2/3 mx-auto rounded-lg p-5'>
-      <div className="mb-4">
-        <input type="text" className="border-black p-2 rounded-lg w-2/3 mx-auto border-2" placeholder='Name' />
-      </div>
-      <div className="mb-4">
-        <input type="text" className="border-black p-2 rounded-lg w-2/3 mx-auto border-2" placeholder='Email Address' />
-      </div>
-      <div className="mb-4">
-        <input type="text" className="border-black p-4 rounded-lg w-2/3 mx-auto border-2" placeholder='Message' />
-      </div>
-      <div className="mb-4">
-        <button className='border-black p-2 rounded-lg bg-blue-500 w-1/3 mx-auto border-2  text-white font-semibold'>Submit</button>
-      </div>
-    </form>
-  </div>
+    
+    <div>
+    <div className="absolute">
+    {/* <img src='https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg' */}
+    <img src = {img2}
+         alt='Background' />
+</div>
+
+<form onSubmit={(e) => e.preventDefault()}
+className="w-3/12 absolute p-16 bg-orange-300 bg-opacity-60 my-36 mx-auto right-0 left-0 text-black rounded-lg">
+
+<h1 className="font-bold text-4xl my-2 p-3">Contact Us</h1>
+
+<p className='font-semibold'>Have any queries or feedback? Let us know!</p>
+
+
+<input
+type="text" placeholder="Name" className="p-4 my-4 w-full bg-white rounded-lg  bg-opacity-80 text-black font-semibold" />
+
+
+<input 
+type="text" placeholder="Email-address" className="p-4 my-4 w-full bg-white rounded-lg bg-opacity-80 text-black font-semibold" />
+
+<input
+type="text" placeholder="Enter your feedback" className="pt-5 pb-14  pl-3 my-2 w-full bg-white rounded-lg bg-opacity-80 text-black font-semibold  mr-[40%]" />
+
+
+<button className="p-4 my-6 bg-amber-500 rounded-lg font-semibold w-full hover:bg-amber-400 text-lg"
+onClick={handleButtonClick}
+>
+Submit</button>
+
+</form>
+</div>
   )
 }
 
