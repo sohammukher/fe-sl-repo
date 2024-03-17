@@ -8,7 +8,7 @@ const Contact = () => {
 
   const handleButtonClick = () => {
 
-    navigate("/")
+    navigate("/feedback")
   }
 
 
