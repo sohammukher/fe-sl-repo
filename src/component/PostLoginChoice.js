@@ -69,7 +69,11 @@ const PostLoginChoice = () => {
 
   return (
     <div>
-        <div className='p-2 mt-20   text-4xl text-center'>Choose your age group </div>
+
+    {/* <div className='absolute'> */}
+    {/* <img className='h-screen object-cover w-screen' src='https://w.forfun.com/fetch/2c/2ceda46989c2534b90b8aabf48f66a97.jpeg' /> */}
+    
+        <div className='p-2 mt-20   text-4xl text-center font-semibold'>Choose your age group </div>
 
 
         <div className=' flex m-20  justify-center'>
@@ -80,12 +84,7 @@ const PostLoginChoice = () => {
       </Link>
              ))}
         </div>
-
-
-
-        
-
-
+    
     </div>
   )
 }
