@@ -5,7 +5,7 @@ const AdultPage = () => {
     const wordsData = [
         { difficulty: "Basic", words: ["Hello", "Thank you", "Help"] },
         { difficulty: "Intermediate", words: ["Work", "Travel", "Money"] },
-        { difficulty: "Advance", words: ["Health", "Education", "Technology"] }
+        { difficulty: "Advanced", words: ["Health", "Education", "Technology"] }
       ];
       
       console.log(wordsData);
@@ -13,9 +13,9 @@ const AdultPage = () => {
       
       return (
         <div>
-            <div className='p-2 mt-20   text-4xl text-center'>Adults Learning</div>
+            <div className='p-2 mt-20   text-4xl text-center font-semibold'>Adults Learning</div>
     
-            <div>
+            <div className='font-semibold p-3 '>
                 {wordsData.map((curr,index)=>(<DifficultyCard key={index} props={curr}/>))}
             </div>
         </div>
