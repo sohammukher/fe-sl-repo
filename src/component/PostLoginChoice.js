@@ -11,6 +11,7 @@ import { Provider, useDispatch } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice'
 import appStore from '../utils/appStore';
 import { Link } from 'react-router-dom';
+import img2 from '../2ceda46989c2534b90b8aabf48f66a97.jpeg'
 
 
 const PostLoginChoice = () => {
@@ -70,8 +71,10 @@ const PostLoginChoice = () => {
   return (
     <div>
 
-    {/* <div className='absolute'> */}
-    {/* <img className='h-screen object-cover w-screen' src='https://w.forfun.com/fetch/2c/2ceda46989c2534b90b8aabf48f66a97.jpeg' /> */}
+    {/* <div className="absolute">
+                <img src = {img2}
+                     alt='Background' />
+      </div> */}
     
         <div className='p-2 mt-20   text-4xl text-center font-semibold'>Choose your age group </div>
 

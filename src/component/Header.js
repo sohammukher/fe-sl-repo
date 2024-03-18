@@ -4,21 +4,21 @@
 // -Nav Items
 
 // -------------------------
-import { useState,useEffect } from "react";
+// import { useState,useEffect } from "react";
 import { auth } from "../utils/firebase";
 import { signOut } from "firebase/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const Header = () => {
-  let loginBtnTxt = "Login";
+  // let loginBtnTxt = "Login";
 
- let [modeText, setModeText] = useState("Dark");
+//  let [modeText, setModeText] = useState("Dark");
 
-  const [loginBtn, setloginBtn] = useState(loginBtnTxt);
+//   const [loginBtn, setloginBtn] = useState(loginBtnTxt);
 
 
-  const [welcomeText,setWelcomeText] = useState("Welcome Visitor");
+//   const [welcomeText,setWelcomeText] = useState("Welcome Visitor");
 
 
   const navigate = useNavigate();
@@ -37,8 +37,8 @@ const Header = () => {
 
   return (
 
-    <div className=" bg-amber-400 flex bg-gradient-to-t from-orange-400  justify-between   h-20">
-     <div className=" font-extrabold px-5 p-4 text-3xl">
+    <div className=" bg-amber-400 flex bg-gradient-to-t from-orange-400  justify-between   h-20 ">
+     <div className=" font-extrabold px-5 p-4 text-3xl cursor-pointer">
       SignLingual
      </div>
 
