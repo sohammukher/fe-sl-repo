@@ -11,7 +11,7 @@ import { Provider, useDispatch } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice'
 import appStore from '../utils/appStore';
 import { Link } from 'react-router-dom';
-import img2 from '../2ceda46989c2534b90b8aabf48f66a97.jpeg'
+// import img2 from '../2ceda46989c2534b90b8aabf48f66a97.jpeg'
 
 
 const PostLoginChoice = () => {
