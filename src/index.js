@@ -63,6 +63,13 @@ const appRouter = createBrowserRouter([
   }
 ])
 
+// Dark Mode Switch
+// const darkToggle = document.querySelector('.toggle-dark');
+// darkToggle.addEventListener('click',(event)=>{
+//   console.log("Dark Mode Clickeds")
+//   event.preventDefault();
+//   document.documentElement.classList.toggle('dark');
+// })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

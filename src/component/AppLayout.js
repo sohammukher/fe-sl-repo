@@ -24,7 +24,7 @@ const AppLayout = () => {
   
   
   return (
-    <div className='dark'>
+    <div >
     <Provider store={appStore}> 
 
       <Header />
