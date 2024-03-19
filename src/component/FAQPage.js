@@ -7,7 +7,7 @@ const FAQPage = () => {
       <div className="relative">
         {/* Background image */}
         {/* <div className="absolute inset-0 bg-fit bg-center z-0" style={{ backgroundImage: "url('https://w.forfun.com/fetch/2c/2ceda46989c2534b90b8aabf48f66a97.jpeg')", opacity: "0.3" }}></div> */}
-        <div className="p-10 absolute h-screen bg-cover w-screen" style={{ backgroundImage: "url('https://w.forfun.com/fetch/2c/2ceda46989c2534b90b8aabf48f66a97.jpeg')", opacity: "0.3" }}></div>
+        <div className="absolute h-screen bg-cover w-screen" style={{ backgroundImage: "url('https://w.forfun.com/fetch/2c/2ceda46989c2534b90b8aabf48f66a97.jpeg')", opacity: "0.3" }}></div>
 
         {/* Content */}
         <div className="container mx-auto px-4 py-8 relative z-10 bg-white bg-opacity-80 rounded-lg shadow-lg">
