@@ -64,6 +64,8 @@ function isDarkModeActive(){
 
      
      <span className="px-2 cursor-pointer">ABOUT</span>
+
+     
      <span className="px-2 cursor-pointer">CONTACT</span>
      <span className="px-2 cursor-pointer">FAQ</span>
      
