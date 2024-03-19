@@ -11,11 +11,20 @@ import appStore from '../utils/appStore';
 
 const AppLayout = () => {
 
+  const theme = 0; // Change
+
+  // useEffect(()=>{
+  //   if(theme === "dark"){
+  //     document.documentElement.classList.add("dark");
+  //   }else{
+  //     document.documentElement.classList.add("dark");
+  //   }
+  // })
 
   
   
   return (
-    <div>
+    <div className='dark'>
     <Provider store={appStore}> 
 
       <Header />
