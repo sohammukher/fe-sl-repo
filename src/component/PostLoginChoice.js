@@ -6,12 +6,12 @@ import ChoiceShimmer from './ChoiceShimmer';
 
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../utils/firebase';
-// import {useEffect} from "react"
-import { Provider, useDispatch } from 'react-redux';
+
+import { useDispatch } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice'
-import appStore from '../utils/appStore';
+
 import { Link } from 'react-router-dom';
-// import img2 from '../2ceda46989c2534b90b8aabf48f66a97.jpeg'
+
 
 
 const PostLoginChoice = () => {
