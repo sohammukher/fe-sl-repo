@@ -18,6 +18,7 @@ import PostLoginChoice from './component/PostLoginChoice';
 import { KidsPage } from './component/KidsPage';
 import AdultPage from './component/AdultPage';
 import FeedbackSubmitted from './component/FeedbackSubmitted';
+import FAQPage from './component/FAQPage';
 // import { Provider, useDispatch } from 'react-redux';
 // import { addUser, removeUser } from '../utils/userSlice'
 // import appStore from '../utils/appStore';
@@ -54,6 +55,10 @@ const appRouter = createBrowserRouter([
       path: "/feedback",
       element: <FeedbackSubmitted/>
   },
+  {
+    path: "/faq",
+    element: <FAQPage/>
+},
       ]
   },
   {
