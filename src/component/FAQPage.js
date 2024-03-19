@@ -43,7 +43,7 @@ const FAQPage = () => {
           </div>
 
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-2">Can I contribute to this project?</h2>
+            <h2 className="text-2xl font-bold mb-2">Can I contribute to this project ?</h2>
             <p className='text-lg font-semibold'>Yes, this project is open-source. You can find the source code on GitHub and contribute by submitting bug fixes, improvements, or new features.</p>
           </div>
 
