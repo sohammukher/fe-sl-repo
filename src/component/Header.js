@@ -65,7 +65,7 @@ function isDarkModeActive(){
      
      <span className="px-2 cursor-pointer">ABOUT</span>
 
-     <Link to='/faq'>
+     <Link to='/contact'>
      <span className="px-2 cursor-pointer">CONTACT</span>
      </Link>
 
