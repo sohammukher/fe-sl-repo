@@ -27,6 +27,7 @@ import FeedbackSubmitted from './component/FeedbackSubmitted';
 
 import {lazy,Suspense} from 'react'
 import LoadingScreen from './component/LoadingScreen';
+import AboutUsPage from './component/AboutUs';
 
 
 
@@ -91,6 +92,12 @@ const appRouter = createBrowserRouter([
       <FAQPage/>
       </Suspense>),
     errorElement: <Error />,
+
+},
+{
+  path: "/about",
+  element: <AboutUsPage />,
+  errorElement: <Error />,
 
 },
 
