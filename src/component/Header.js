@@ -231,7 +231,7 @@ export default function Header() {
                   href="#"
                   key={link[0]}
                   onClick={handleCloseNavMenu}
-                  sx={{ fontWeight: 500 }}
+                  sx={{ fontWeight: 500, color: "#E29238" }}
                 >
                   {link[0]}
                 </Button>
@@ -242,7 +242,7 @@ export default function Header() {
               component="a"
               href="#"
               variant="contained"
-              color="primary"
+              color="warning"
               sx={{
                 borderRadius: 999,
               }}
