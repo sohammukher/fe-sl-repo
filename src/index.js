@@ -27,6 +27,7 @@ import FeedbackSubmitted from './component/FeedbackSubmitted';
 
 import {lazy,Suspense} from 'react'
 import LoadingScreen from './component/LoadingScreen';
+import AboutUsPage from './component/AboutUs';
 
 
 
@@ -93,6 +94,12 @@ const appRouter = createBrowserRouter([
     errorElement: <Error />,
 
 },
+{
+  path: "/about",
+  element: <AboutUsPage />,
+  errorElement: <Error />,
+
+},
 
 
       ]
@@ -112,6 +119,7 @@ const appRouter = createBrowserRouter([
 //   event.preventDefault();
 //   document.documentElement.classList.toggle('dark');
 // })
+window.parent.document.body.style.zoom = 0.67;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

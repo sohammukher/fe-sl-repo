@@ -5,6 +5,20 @@
 
 // // -------------------------
 // // import { useState,useEffect } from "react";
+import * as React from "react"
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  Container,
+  Button,
+  MenuItem,
+} from "@mui/material"
+import { FiMenu } from "react-icons/fi"
+import { HiArrowSmRight } from "react-icons/hi"
 import { auth } from "../utils/firebase";
 import { signOut } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
@@ -39,7 +53,19 @@ import useOnlineStatus from "../utils/useOnlineStatus"
 
 // // Internet Status:
 //   // Checking Internet Status :
-//   const internetStatus = useOnlineStatus()
+//   const [internetStatus, setInternetStatus] = useState(true);
+//   const internetStatusVariable = useOnlineStatus()
+
+//   console.log(internetStatusVariable)
+
+
+
+//   useEffect(() => {
+
+//     setInternetStatus(internetStatusVariable);
+//   }, [internetStatus]);
+
+  // setInternetStatus(internetStatusVariable);
 
 
 //   const navigate = useNavigate();
@@ -89,7 +115,7 @@ import useOnlineStatus from "../utils/useOnlineStatus"
 //      <span className="px-2 cursor-pointer">FAQ</span>
 //      </Link>
 
-//      <span className="">Online Status: {internetStatus?"🟢":"🔴"}</span>
+     {/* <span className="">Online Status: {internetStatus?"🟢":"🔴"}</span> */}
 
 //      </div>
 
@@ -111,20 +137,7 @@ import useOnlineStatus from "../utils/useOnlineStatus"
 
 // export default Header;
 
-import * as React from "react"
-import {
-  AppBar,
-  Box,
-  Toolbar,
-  IconButton,
-  Typography,
-  Menu,
-  Container,
-  Button,
-  MenuItem,
-} from "@mui/material"
-import { FiMenu } from "react-icons/fi"
-import { HiArrowSmRight } from "react-icons/hi"
+
 // mock data
 const links = [["Home", '/'],["About", '/about'], ["Docs", '/faq'], ["Contact Us", '/contact']]
 const Logo = () => (
@@ -162,8 +175,19 @@ export default function Header() {
   // }
   
   // Internet Status:
-    // Checking Internet Status :
-    const internetStatus = useOnlineStatus()
+    // Internet Status:
+  // Checking Internet Status :
+  const [internetStatus, setInternetStatus] = useState(true);
+  const internetStatusVariable = useOnlineStatus()
+
+  console.log(internetStatusVariable)
+
+
+
+  useEffect(() => {
+
+    setInternetStatus(internetStatusVariable);
+  }, [internetStatus]);
   
     const navigate = useNavigate();
   
