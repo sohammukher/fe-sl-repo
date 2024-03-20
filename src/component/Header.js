@@ -39,7 +39,19 @@ function isDarkModeActive(){
 
 // Internet Status:
   // Checking Internet Status :
-  const internetStatus = useOnlineStatus()
+  const [internetStatus, setInternetStatus] = useState(true);
+  const internetStatusVariable = useOnlineStatus()
+
+  console.log(internetStatusVariable)
+
+
+
+  useEffect(() => {
+
+    setInternetStatus(internetStatusVariable);
+  }, [internetStatus]);
+
+  // setInternetStatus(internetStatusVariable);
 
 
   const navigate = useNavigate();
@@ -74,14 +86,14 @@ function isDarkModeActive(){
 
      <div className="px-5 py-6  font-bold text-xl">
      <Link to="/">
-     <span className="px-2 cursor-pointer">HOME</span>
+     <span className="px-2 cursor-pointer">Home</span>
      </Link>
 
      
-     <span className="px-2 cursor-pointer">ABOUT</span>
+     <span className="px-2 cursor-pointer">About</span>
 
      <Link to='/contact'>
-     <span className="px-2 cursor-pointer">CONTACT</span>
+     <span className="px-2 cursor-pointer">Contact Us</span>
      </Link>
 
 
@@ -89,7 +101,7 @@ function isDarkModeActive(){
      <span className="px-2 cursor-pointer">FAQ</span>
      </Link>
 
-     <span className="">Online Status: {internetStatus?"🟢":"🔴"}</span>
+     {/* <span className="">Online Status: {internetStatus?"🟢":"🔴"}</span> */}
 
      </div>
 
