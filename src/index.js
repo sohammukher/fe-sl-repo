@@ -119,7 +119,7 @@ const appRouter = createBrowserRouter([
 //   event.preventDefault();
 //   document.documentElement.classList.toggle('dark');
 // })
-window.parent.document.body.style.zoom = 0.67;
+// window.parent.document.body.style.zoom = 0.67;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

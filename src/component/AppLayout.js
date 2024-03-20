@@ -15,7 +15,7 @@ const AppLayout = () => {
   useEffect(() => {
     // Force the browser to zoom out
     console.log("Application Loaded")
-    document.body.style.zoom = "67%"; // Adjust the zoom level as needed
+    // document.body.style.zoom = "67%"; // Adjust the zoom level as needed
 
 
     // Handle Key Press Part Starts
