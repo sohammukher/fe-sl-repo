@@ -8,7 +8,9 @@
 import { auth } from "../utils/firebase";
 import { signOut } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { domain } from "../utils/endpoints";
+import useOnlineStatus from "../utils/useOnlineStatus"
 
 
 const Header = () => {
@@ -35,6 +37,10 @@ function isDarkModeActive(){
   return document.documentElement.classList.contains('dark');
 }
 
+// Internet Status:
+  // Checking Internet Status :
+  const internetStatus = useOnlineStatus()
+
 
   const navigate = useNavigate();
 
@@ -50,12 +56,21 @@ function isDarkModeActive(){
     });
   }
 
+  // // Internet Status
+  // console.log("internetStatus "+internetStatus)
+  // if(internetStatus === false){
+  //   return <h1>You are Offline!!!!</h1>
+  // }
+
+
   return (
 
-    <div className=" bg-amber-400 flex bg-gradient-to-t from-orange-400  justify-between   h-20 ">
+    <div className=" bg-amber-400 flex bg-gradient-to-t from-orange-400  justify-between   h-20 w-[100%]">
+    <Link to="/">
      <div className=" font-extrabold px-5 p-4 text-3xl cursor-pointer">
       SignLingual
      </div>
+     </Link>
 
      <div className="px-5 py-6  font-bold text-xl">
      <Link to="/">
@@ -73,13 +88,17 @@ function isDarkModeActive(){
      <Link to='/faq'>
      <span className="px-2 cursor-pointer">FAQ</span>
      </Link>
+
+     <span className="">Online Status: {internetStatus?"🟢":"🔴"}</span>
+
      </div>
 
 
 {/* <div className="bg-blue-800 p-2 rounded-lg  text-white font-semibold"> Logout */}
 {/* </div> */}
 
-<button onClick={toggleTheme} className=" font-bold p-3 m-3 ml-[65%] bg-black text-white rounded-xl hover:bg-blue-400 dark:hover:bg-blue-400 dark:bg-blue-50 dark:text-black toggle-dark">{modeText} Mode </button>
+
+<button onClick={toggleTheme} className=" font-bold p-3 m-3 ml-[40%] bg-black text-white rounded-xl hover:bg-blue-400 dark:hover:bg-blue-400 dark:bg-blue-50 dark:text-black toggle-dark">{modeText} Mode </button>
 
 <button onClick={handleLogout} className="bg-red-800 text-xl text-white rounded-xl p-3 m-3 hover:bg-red-600">Logout</button>
 

@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { domain } from "../utils/endpoints";
+
+
 const Landing = () => {
   return (
    
@@ -14,6 +17,7 @@ const Landing = () => {
     <h1 className="text-3xl font-bold text-center text-black">Welcome to SignLingual🖖🏻</h1>
     <p className="text-xl text-center font-semibold p-4 text-black">Break down communication barriers, Translate text into sign language instantly!</p>
     </div>
+
 
 
     <div className='absolute '>   
@@ -30,8 +34,10 @@ const Landing = () => {
       <div className='relative opacity-100 p-32 flex flex-col justify-center bg-gray-500 bg-opacity-50 rounded-3xl'>
 
       <div>
-        <div className=' font-bold text-3xl p-3 '>Convert Text to Sign Language</div>
+      <div className=' font-bold text-3xl p-3 '>Convert Text to Sign Language</div>
+      <a href={domain} rel="noopener noreferrer">        
         <button className='p-4 m-2 bg-amber-400 rounded-2xl p-4 ml-[130px] w-44 border-2 border-black font-semibold text-xl  hover:bg-amber-300'>Convert</button>
+      </a>
       </div>
 
       <div className=' mt-10'>

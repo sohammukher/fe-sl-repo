@@ -7,10 +7,11 @@ import Landing from './component/Landing';
 import Contact from './component/Contact';
 // import { createBrowserRouter } from 'react-router-dom'
 // import { RouterProvider } from 'react-router-dom'
+import Error from './component/Error';
 
 
 // Routing Imports
-import {createBrowserRouter,RouterProvider } from "react-router-dom";
+import {createBrowserRouter,RouterProvider, Route } from "react-router-dom";
 
 import AppLayout from './component/AppLayout'
 import Login from './component/Login';
@@ -27,45 +28,63 @@ const appRouter = createBrowserRouter([
   {
       path: "/",
       element: <AppLayout/>,
+      errorElement: <Error />,
       children:
       [ 
           {
           path: "/",
-          element: <Landing/>
+          element: <Landing/>,
+          errorElement: <Error />,
+
         }
         ,
           {
               path: "/contact",
-              element: <Contact/>
+              element: <Contact/>,
+              errorElement: <Error />,
+
           },
 
           {
             path: "/choice",
-            element: <PostLoginChoice/>
+            element: <PostLoginChoice/>,
+            errorElement: <Error />,
+
         },
         {
           path: "/kids",
-          element: <KidsPage/>
+          element: <KidsPage/>,
+          errorElement: <Error />,
+
       },
       {
         path: "/adults",
-        element: <AdultPage/>
+        element: <AdultPage/>,
+        errorElement: <Error />,
+
     },
     {
       path: "/feedback",
-      element: <FeedbackSubmitted/>
+      element: <FeedbackSubmitted/>,
+      errorElement: <Error />,
+
   },
   {
     path: "/faq",
-    element: <FAQPage/>
+    element: <FAQPage/>,
+    errorElement: <Error />,
+
 },
+
+
       ]
   },
   {
 
     path: "/login",
     element: <Login/>
-  }
+  },
+
 ])
 
 // Dark Mode Switch
@@ -77,6 +96,8 @@ const appRouter = createBrowserRouter([
 // })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+appRouter.routes.push(<Route path="*" element={<Error />} />);
 
 
 // Routing Done From Root.
