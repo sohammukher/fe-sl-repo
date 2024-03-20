@@ -7,6 +7,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { useNavigate } from 'react-router-dom';
 import img2 from '../ASL-cover-image.jpg'
 import img3 from '../three-hands-sign-the-word-new.jpg'
+import Header from './Header';
 
 const Login = () => {
 
@@ -40,8 +41,8 @@ const Login = () => {
   const passwordValue = password.current ? password.current.value : null;
   const nameValue = name.current ? name.current.value : null;
 
-  console.log(emailValue);
-  console.log(passwordValue);
+  // console.log(emailValue);
+  // console.log(passwordValue);
 
   const message = validate(emailValue, passwordValue, nameValue);
  
@@ -70,6 +71,8 @@ const Login = () => {
     // Signed up 
     const user = userCredential.user;
     console.log(user);
+    localStorage.setItem("isLoggedIn", true);
+    localStorage.setItem("email", user.email);
 
     navigate("/choice");
   })
@@ -91,6 +94,9 @@ const Login = () => {
     // Signed in 
     const user = userCredential.user;
     console.log(user);
+
+    localStorage.setItem("isLoggedIn", true);
+    localStorage.setItem("email", user.email);
     navigate("/choice");
   })
   .catch((error) => {
@@ -103,7 +109,7 @@ const Login = () => {
 
   return(
     <div>
-      <LoginHeader />
+      <Header />
 
 
       <div className="absolute">

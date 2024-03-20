@@ -21,7 +21,7 @@ import { FiMenu } from "react-icons/fi"
 import { HiArrowSmRight } from "react-icons/hi"
 import { auth } from "../utils/firebase";
 import { signOut } from "firebase/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { domain } from "../utils/endpoints";
 import useOnlineStatus from "../utils/useOnlineStatus"
@@ -154,6 +154,10 @@ const Logo = () => (
 )
 // simple nav
 export default function Header() {
+  const location = useLocation();
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const { hash, pathname, search } = location;
+  // console.log(hash, pathname, search);
   const [anchorElNav, setAnchorElNav] = React.useState(null)
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget)
@@ -237,20 +241,36 @@ export default function Header() {
                 </Button>
               </Link>
             ))}
-            <Link to="/login">
-            <Button
-              component="a"
-              href="#"
-              variant="contained"
-              color="warning"
-              sx={{
-                borderRadius: 999,
-              }}
-              endIcon={<HiArrowSmRight size={16} />}
-            >
-              Login
-            </Button>
-            </Link>
+            {pathname !== '/login' && (
+              !isLoggedIn ? (<Link to="/login">
+                <Button
+                  component="a"
+                  href="#"
+                  variant="contained"
+                  color="warning"
+                  sx={{
+                    borderRadius: 999,
+                  }}
+                  endIcon={<HiArrowSmRight size={16} />}
+                >
+                  Login
+                </Button>
+              </Link>)  : (
+                <Button
+                  component="a"
+                  href="#"
+                  variant="contained"
+                  color="warning"
+                  sx={{
+                    borderRadius: 999,
+                  }}
+                  // endIcon={<HiArrowSmRight size={16} />}
+                  onClick={handleLogout}
+                >
+                  Logout
+                </Button>
+              )
+            )}
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton

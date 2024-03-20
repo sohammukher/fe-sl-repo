@@ -14,9 +14,9 @@ const validate = (email, password, name) => {
 
     if(!isEmailValid) return "Email is not valid!";
 
-    if(!isPasswordValid) return "Password is not valid!";
+    if(!isPasswordValid) return "Password should contain atleast eight characters containing a number and special character!";
 
-    if(!isNameValid) return "Name is not valid!";
+    if(!isNameValid) return "Name is required!";
 
   // null means there in no error from above  
   return null;
