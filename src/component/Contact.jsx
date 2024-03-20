@@ -2,6 +2,9 @@ import React from 'react'
 import img2 from '../ASL-cover-image.jpg'
 import { useNavigate } from 'react-router-dom'
 
+
+
+
 const Contact = () => {
 
   const navigate = useNavigate();
