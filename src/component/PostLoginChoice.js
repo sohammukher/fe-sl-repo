@@ -50,7 +50,7 @@ const PostLoginChoice = () => {
         // Simulate delay with setTimeout
         const delayTimeout = setTimeout(() => {
           setShowShimmer(false); // Hide shimmer effect after delay
-        }, 1000); // Set delay time in milliseconds
+        }, 500); // Set delay time in milliseconds
     
         // Clear timeout to avoid memory leaks
         return () => clearTimeout(delayTimeout);

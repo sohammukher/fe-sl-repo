@@ -197,7 +197,7 @@ export default function Header() {
   
     // To sign out the user
     const handleLogout = () => {
-  
+      localStorage.removeItem("isLoggedIn");
       signOut(auth).then(() => {
         // Sign-out successful.
         navigate("/login");
