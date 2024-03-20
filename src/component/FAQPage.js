@@ -32,10 +32,7 @@ const FAQPage = () => {
             <p className='text-lg font-semibold'>The app is built using React.js for the frontend user interface and Tailwind CSS for styling.</p>
           </div>
 
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-2">Can I use this on other devices?</h2>
-            <p className='text-lg font-semibold'>Yes, the app is designed to be responsive and should work on most modern devices.</p>
-          </div>
+     
 
           <div className="mb-8">
             <h2 className="text-2xl font-bold mb-2">Is the sign language accurate?</h2>
