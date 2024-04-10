@@ -143,8 +143,8 @@ const links = [["Home", '/'],["About", '/about'], ["Docs", '/faq'], ["Contact Us
 const Logo = () => (
   <Box
     sx={{
-      fontSize: "24px",
-      fontWeight: 800,
+      fontSize: "28px",
+      fontWeight: 900,
       textDecoration: "none",
       color: "black",
     }}
