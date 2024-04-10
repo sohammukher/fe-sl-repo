@@ -8,7 +8,7 @@ export const KidsPage = () => {
     // Difficulty Cards
     const wordsData = [
         { difficulty: "Basic", words: ["Mom", "Eat", "Play"] },
-        { difficulty: "Intermediate", words: ["Colors", "Animals", "Toilet"] },
+        { difficulty: "Intermediate", words: ["Call", "Animals", "Toilet"] },
         { difficulty: "Advanced", words: ["Please", "Friend", "Bed"] }
       ];
       
